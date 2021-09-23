@@ -9,6 +9,9 @@ export const getDocument = (editor: vscode.TextEditor): vscode.TextDocument =>
 export const getEol = (document: vscode.TextDocument): string =>
   document.eol === 1 ? "\n" : "\r\n";
 
+/**
+ * @see https://github.com/rockingskier/vscode-copy-copy-paste/blob/master/src/extension.ts#L16
+ */
 export const getSelectedText = () => {
   const editor = getEditor();
   if (!editor) {
@@ -20,18 +23,15 @@ export const getSelectedText = () => {
     return;
   }
 
-  // QUESTION: Is this needed?
   const eol = getEol(document);
 
   return editor.selections.map((selection) => {
-    // Copy the whole line when no text is selected
     if (
       selection.start.line === selection.end.line &&
       selection.start.character === selection.end.character
     ) {
       const range = document.lineAt(selection.start).range;
       const text = editor.document.getText(range);
-      // Add a new line to mimic native bahavious
       return `${text}${eol}`;
     }
 

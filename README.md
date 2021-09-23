@@ -1,6 +1,6 @@
 <p align="center">
  <h2 align="center">Strip TS Copy</h2>
- <p align="center">VSCode plugin to copy typescript code as js into clipboard</p>
+ <p align="center">VSCode plugin to copy TypeScript code as js into clipboard</p>
   <p align="center">
     <a href="https://github.com/anuraghazra/strip-ts-copy/issues">
       <img alt="Issues" src="https://img.shields.io/github/issues/anuraghazra/strip-ts-copy?color=0088ff" />
@@ -25,6 +25,9 @@
 
 strip-ts-copy is a simple vscode plugin which simply transpiles the selected code and directly puts it inside of your clipboard.
 
+> Inspired by BenLesh: 
+> https://twitter.com/BenLesh/status/1441057916413489156
+
 ### Usage
 
 1. Install the plugin
@@ -32,3 +35,8 @@ strip-ts-copy is a simple vscode plugin which simply transpiles the selected cod
 2. Select a peice of code with TS
 
 3. Press <kbd>ctrl+shift+T<kbd> to copy the transpiled code
+
+### TODO
+
+- [ ] Write tests
+- [ ] Setup release pipeline
