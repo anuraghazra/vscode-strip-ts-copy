@@ -12,6 +12,11 @@
   "activationEvents": [
     "*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anuraghazra/vscode-strip-ts-copy.git"
+  },
+  "publisher": "anuraghazra",
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -23,16 +28,17 @@
     "keybindings": [
       {
         "command": "strip-ts-copy.copyAsJs",
-        "key": "ctrl+shift+t",
-        "mac": "cmd+shift+t"
+        "key": "ctrl+alt+c",
+        "mac": "ctrl+alt+c"
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "yarn run package",
-    "compile": "webpack",
-    "watch": "webpack --watch",
-    "package": "webpack --mode production --devtool hidden-source-map",
+    "vscode:prepublish": "npm run esbuild-base -- --minify",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+    "compile": "yarn esbuild-base -- --sourcemap",
+    "watch": "yarn esbuild-base -- --sourcemap --watch",
+    "package": "yarn compile",
     "test-compile": "tsc -p . --outDir out",
     "pretest": "yarn run test-compile && yarn run compile && yarn run lint",
     "lint": "eslint src --ext ts",
