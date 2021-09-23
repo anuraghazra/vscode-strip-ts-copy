@@ -30,7 +30,7 @@
       {
         "command": "strip-ts-copy.copyAsJs",
         "key": "ctrl+alt+c",
-        "mac": "ctrl+alt+c"
+        "mac": "shift+alt+cmd+c"
       }
     ]
   },

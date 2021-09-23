@@ -35,7 +35,9 @@ strip-ts-copy is a vscode plugin which simply transpiles the selected code and d
   
 2. Select a piece of code with TS
 
-3. Press <kbd>ctrl+alt+c</kbd> to copy the transpiled code
+3. To copy the transpiled code press
+  - In Windows <kbd>ctrl+alt+c</kbd>
+  - In Mac <kbd>shift+alt+cmd+c</kbd>
 
 ### TODO
 
