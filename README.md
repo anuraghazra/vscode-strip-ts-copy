@@ -1,7 +1,7 @@
 <p align="center">
   <img width="150px" src="./images/icon-large.png" alt="Strip TS Copy" />
  <h2 align="center">Strip TS Copy</h2>
- <p align="center">VSCode to strip types from TypeScript code while copying it.</p>
+ <p align="center">VSCode plugin to strip types from TypeScript code while copying it.</p>
   <p align="center">
     <a href="https://github.com/anuraghazra/strip-ts-copy/issues">
       <img alt="Issues" src="https://img.shields.io/github/issues/anuraghazra/strip-ts-copy?color=0088ff" />
