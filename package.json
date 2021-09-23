@@ -1,7 +1,8 @@
 {
   "name": "strip-ts-copy",
-  "displayName": "strip-ts-copy",
+  "displayName": "Strip TS Copy",
   "description": "Strip types from TypeScript code while copying it.",
+  "icon": "images/icon.png",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.60.0"
