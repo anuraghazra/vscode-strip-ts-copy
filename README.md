@@ -3,11 +3,11 @@
  <h2 align="center">Strip TS Copy</h2>
  <p align="center">VSCode plugin to strip types from TypeScript code while copying it.</p>
   <p align="center">
-    <a href="https://github.com/anuraghazra/strip-ts-copy/issues">
-      <img alt="Issues" src="https://img.shields.io/github/issues/anuraghazra/strip-ts-copy?color=0088ff" />
+    <a href="https://github.com/anuraghazra/vscode-strip-ts-copy/issues">
+      <img alt="Issues" src="https://img.shields.io/github/issues/anuraghazra/vscode-strip-ts-copy?color=0088ff" />
     </a>
-    <a href="https://github.com/anuraghazra/strip-ts-copy/pulls">
-      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/anuraghazra/strip-ts-copy?color=0088ff" />
+    <a href="https://github.com/anuraghazra/vscode-strip-ts-copy/pulls">
+      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/anuraghazra/vscode-strip-ts-copy?color=0088ff" />
     </a>
   </p>
   <p align="center"><small>Love the project? Please consider sponsoring to help it improve!</small></p>
