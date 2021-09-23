@@ -23,7 +23,7 @@
 
 ### The Solution
 
-strip-ts-copy is a simple vscode plugin which simply transpiles the selected code and directly puts it inside of your clipboard.
+strip-ts-copy is a vscode plugin which simply transpiles the selected code and directly puts it inside of your clipboard.
 
 > Inspired by BenLesh: 
 > https://twitter.com/BenLesh/status/1441057916413489156
@@ -33,8 +33,7 @@ strip-ts-copy is a simple vscode plugin which simply transpiles the selected cod
 1. Install the plugin from [marketplace](https://marketplace.visualstudio.com/items?itemName=anuraghazra.strip-ts-copy)
 
   
-
-2. Select a peice of code with TS
+2. Select a piece of code with TS
 
 3. Press <kbd>ctrl+alt+c</kbd> to copy the transpiled code
 
