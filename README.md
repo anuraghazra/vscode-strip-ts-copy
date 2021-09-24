@@ -39,6 +39,12 @@ strip-ts-copy is a vscode plugin which simply transpiles the selected code and d
   - In Windows <kbd>ctrl+alt+c</kbd>
   - In Mac <kbd>shift+alt+cmd+c</kbd>
 
+### Local development
+
+1. Clone the repo
+2. Install deps
+3. Open `Run & Debug (Ctrl+Shift+D)` panel in vscode and hit start debugging button
+
 ### TODO
 
 - [ ] Write tests
