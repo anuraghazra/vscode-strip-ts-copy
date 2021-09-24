@@ -32,7 +32,15 @@
         "key": "ctrl+alt+c",
         "mac": "shift+alt+cmd+c"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context/copy": [
+        {
+          "command": "strip-ts-copy.copyAsJs",
+          "when": "editorHasSelection && editorLangId == typescript"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run esbuild-base -- --minify",
