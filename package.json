@@ -39,12 +39,6 @@
           "command": "strip-ts-copy.copyAsJs",
           "when": "editorHasSelection && editorLangId == typescript"
         }
-      ],
-      "menuBar/edit/copy": [
-        {
-          "command": "strip-ts-copy.copyAsJs",
-          "when": "editorHasSelection && editorLangId == typescript"
-        }
       ]
     }
   },
