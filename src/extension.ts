@@ -2,6 +2,8 @@ import * as vscode from "vscode";
 import * as ts from "typescript";
 import { getSelectedText } from "./getSelectedText";
 import * as prettier from "prettier";
+import normalizeNewlines from "normalize-newline";
+import { reconstructNewLines } from "./reconstructNewLines";
 
 export function activate(context: vscode.ExtensionContext) {
   const command = "strip-ts-copy.copyAsJs";
@@ -9,28 +11,38 @@ export function activate(context: vscode.ExtensionContext) {
   function stripTSCopy() {
     const selectedText = getSelectedText()?.[0];
     const prettierConfig = { parser: "babel-ts" };
-    const tsConfig = {
+    const tsConfig: ts.CompilerOptions = {
       target: ts.ScriptTarget.ESNext,
       allowJs: true,
       jsx: ts.JsxEmit.Preserve,
+      removeComments: false,
     };
 
-    if (!selectedText) {
-      vscode.window.showWarningMessage("No code selected");
+    if (!selectedText?.trim()) {
+      vscode.window.showWarningMessage("StripTSCopy: No Code Selected");
       return;
     }
 
     try {
+      // need to normalize newlines to make sure diffing works correctly with carriage returns
+      const textWithNewLines = normalizeNewlines(selectedText);
       const strippedSource = prettier.format(
-        ts.transpile(selectedText, tsConfig),
+        ts.transpile(textWithNewLines, tsConfig),
         prettierConfig
       );
 
-      vscode.env.clipboard.writeText(strippedSource);
+      // reconstruct newlines to match the original source
+      const finalSource = reconstructNewLines(
+        textWithNewLines,
+        strippedSource
+      ).trim();
 
-      vscode.window.showInformationMessage("Code copied as js");
+      vscode.env.clipboard.writeText(finalSource);
+
+      vscode.window.showInformationMessage("StripTSCopy: Copied As JS");
     } catch (err) {
-      vscode.window.showInformationMessage("Failed to copy as js");
+      console.log(err);
+      vscode.window.showInformationMessage("StripTSCopy: Failed To Copy");
     }
   }
 
