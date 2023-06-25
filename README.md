@@ -17,6 +17,10 @@
   <p align="center"><small>Love the project? Consider sponsoring to help it improve!</small></p>
 </p>
 
+<p align="center">
+<img width="80%" src="./images/strip-ts-copy-demo-1.gif" alt="Gif demo of strip ts copy"/>
+</p>
+
 ### The Problem
 
 "An underdiscussed benefit of JS over TS - I'll frequently test individual functions by pasting them into the browser console. There's no faster feedback loop. You can't do that with TS. JSDoc TS means extra keystrokes, but overall the ergonomics are waaaay better
@@ -36,12 +40,14 @@ strip-ts-copy is a vscode plugin which simply transpiles the selected code and d
 
 1. Install the plugin from [marketplace](https://marketplace.visualstudio.com/items?itemName=anuraghazra.strip-ts-copy)
 
-  
 2. Select a piece of code with TS
 
-3. To copy the transpiled code press
+3. To copy the transpiled code press: 
   - In Windows <kbd>ctrl+alt+c</kbd>
   - In Mac <kbd>shift+alt+cmd+c</kbd>
+  - Or: right click to open the context menu and select "Copy TS as JS"
+
+> Note: You can also customize the keybindings of StripTSCopy from the keyboard shortcuts customizer page in vscode.
 
 ### Local development
 
