@@ -23,15 +23,14 @@
 
 ### The Problem
 
-"An underdiscussed benefit of JS over TS - I'll frequently test individual functions by pasting them into the browser console. There's no faster feedback loop. You can't do that with TS. JSDoc TS means extra keystrokes, but overall the ergonomics are waaaay better
-" - Rich Harris
+"An underdiscussed benefit of JS over TS - I'll frequently test individual functions by pasting them into the browser console. There's no faster feedback loop." - Rich Harris
 
 > https://twitter.com/Rich_Harris/status/1440639878065111048
 
 
 ### The Solution
 
-strip-ts-copy is a vscode plugin which simply transpiles the selected code and directly puts it inside of your clipboard.
+strip-ts-copy simply transpiles the selected code and copies it into your clipboard.
 
 > Inspired by BenLesh: 
 > https://twitter.com/BenLesh/status/1441057916413489156
