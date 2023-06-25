@@ -3,7 +3,7 @@
   "displayName": "Strip TS Copy",
   "description": "Strip types from TypeScript code while copying it.",
   "icon": "images/icon.png",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -34,7 +34,7 @@
       }
     ],
     "menus": {
-      "editor/context/copy": [
+      "editor/context": [
         {
           "command": "strip-ts-copy.copyAsJs",
           "when": "editorHasSelection && editorLangId == typescript"
@@ -68,7 +68,10 @@
     "typescript": "^4.4.3"
   },
   "dependencies": {
+    "@types/diff": "^5.0.3",
     "@types/prettier": "^2.3.2",
+    "diff": "^5.1.0",
+    "normalize-newline": "^4.1.0",
     "prettier": "^2.4.1"
   }
 }
