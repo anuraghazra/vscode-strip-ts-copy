@@ -3,7 +3,7 @@
   "displayName": "Strip TS Copy",
   "description": "Strip types from TypeScript code while copying it.",
   "icon": "images/icon.png",
-  "version": "0.10.0",
+  "version": "0.12.0",
   "engines": {
     "vscode": "^1.60.0"
   },
