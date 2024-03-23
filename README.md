@@ -54,6 +54,12 @@ strip-ts-copy simply transpiles the selected code and copies it into your clipbo
 2. Install deps
 3. Open `Run & Debug (Ctrl+Shift+D)` panel in vscode and hit start debugging button
 
+### Publishing
+
+1. bump package.json version
+2. vsce package
+3. vsce publish
+
 ### TODO
 
 - [ ] Write tests
