@@ -26,19 +26,20 @@ export function activate(context: vscode.ExtensionContext) {
     try {
       // need to normalize newlines to make sure diffing works correctly with carriage returns
       const textWithNewLines = normalizeNewlines(selectedText);
-      prettier.format(
+      const strippedSource = prettier.format(
         ts.transpile(textWithNewLines, tsConfig),
         prettierConfig
-      ).then(strippedSource => {
-        // reconstruct newlines to match the original source
-        const finalSource = reconstructNewLines(
-          textWithNewLines,
-          strippedSource
-        ).trim();
+      );
 
-        vscode.env.clipboard.writeText(finalSource);
-        vscode.window.showInformationMessage("StripTSCopy: Copied As JS");
-      });
+      // reconstruct newlines to match the original source
+      const finalSource = reconstructNewLines(
+        textWithNewLines,
+        strippedSource
+      ).trim();
+
+      vscode.env.clipboard.writeText(finalSource);
+
+      vscode.window.showInformationMessage("StripTSCopy: Copied As JS");
     } catch (err) {
       console.log(err);
       vscode.window.showInformationMessage("StripTSCopy: Failed To Copy");
